@@ -10,6 +10,7 @@ namespace FlowerShop
         int AddOrder(IClient client);
         void AddFlower(IClient order, IClient flower);
         void SetDelivered(IOrder order);
+        void Deliver();
         void RemoveFlower(IClient order, IClient flower);
     }
 }
