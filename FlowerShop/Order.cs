@@ -54,10 +54,10 @@ namespace FlowerShop
         {
             throw new NotImplementedException();
             if (Order.isDelivered == true ){
-                return true;
+                Console.WriteLine("true");
             }
             else {
-                return false;
+                return Console.WriteLine("false");
             }
         }
     }
