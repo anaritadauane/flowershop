@@ -53,6 +53,12 @@ namespace FlowerShop
         public void Deliver()
         {
             throw new NotImplementedException();
+            if (Order.isDelivered == true ){
+                return true;
+            }
+            else {
+                return false;
+            }
         }
     }
 }
