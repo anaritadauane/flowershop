@@ -19,7 +19,7 @@ namespace Tests
             // Arrange 
             Order x = new Order("Daises","Ana", false);
             Order orderMock = Mock.Create<IOrderDAO>();
-            Mock.Arrange(() => orderMock.SetDeliver("Daises").Returns(true);
+            Mock.Arrange(() => orderMock.SetDeliver("Daises").Returns(true));
 
             // Act 
             x.Deliver();
