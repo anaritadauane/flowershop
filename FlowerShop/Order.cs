@@ -9,6 +9,7 @@ namespace FlowerShop
         private List<Flower> flowers;
         private bool isDelivered = false;
         public int Id { get; }
+        
 
         // should apply a 20% mark-up to each flower.
         public double Price {
@@ -51,7 +52,7 @@ namespace FlowerShop
         }
 
         public void Deliver(Order order)
-        {
+        {   IOrder.Deliver();
             throw new NotImplementedException();
             if (order.isDelivered == true ){
                 Console.WriteLine("true");
