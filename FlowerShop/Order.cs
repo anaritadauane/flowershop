@@ -50,10 +50,10 @@ namespace FlowerShop
             throw new NotImplementedException();
         }
 
-        public void Deliver()
+        public void Deliver(Order order)
         {
             throw new NotImplementedException();
-            if (Order.isDelivered == true ){
+            if (order.isDelivered == true ){
                 Console.WriteLine("true");
             }
             else {
