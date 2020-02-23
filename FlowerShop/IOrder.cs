@@ -6,7 +6,7 @@ namespace FlowerShop
 {
     public interface IOrder
     {
-        public void Deliver();
+        void Deliver();
         double Price { get; }
         double Profit { get; }
         IReadOnlyList<IFlower> Ordered { get; }
