@@ -51,7 +51,7 @@ namespace FlowerShop
             throw new NotImplementedException();
         }
 
-        public void Deliver(Order order)
+        public void Deliver()
          {   //IOrder.Deliver();
             throw new NotImplementedException();
             // if (order.isDelivered == true ){
