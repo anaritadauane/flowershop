@@ -1,4 +1,7 @@
 using NUnit.Framework;
+using NSubstitute;
+using Order;
+
 
 namespace Tests
 {
@@ -12,7 +15,20 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            //Assert.Pass();
+            // Arrange 
+            Order x = new Order("Daises","Ana");
+            Order orderMock = Mock.Create<IOrderDAO>();
+            Mock.Arrange(() => orderMock.SetDeliver("Daises").Returns(true);
+
+            // Act 
+            x.Deliver();
+
+            //Assert
+            Assert.IsTrue(x.Deliver());
+
+
+
         }
     }
 }
