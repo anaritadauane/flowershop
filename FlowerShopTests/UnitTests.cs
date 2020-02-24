@@ -18,21 +18,23 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            //Assert.Pass();
+            
             // Arrange 
-            // IOrderDAO orderMock = Mock.Create<IOrderDAO>();
-            //Mock<IVendorBriefRepository> mock = new Mock<IVendorBriefRepository>();
-            Mock<IOrderDAO> orderMock = new Mock<IOrderDAO>();
-            Mock<IClient> clientMock = new Mock<IClient>();
-            Order x = new Order(orderMock, clientMock, false);
+            //IOrderDAO o = new Order( 1049, Ana);
+            
+            IClient c = Substitute.For<IClient>();
+            IOrderDAO e = Substitute.For<IOrderDAO>();
+            IOrder s = new Order(e,c);
+           
+            
             //IOrderDAO orderMock = Mock.Create<IOrderDAO>();
-            Mock.Arrange(() => orderMock.SetDeliver(x).Returns(true));
+            //x.Arrange(() => orderMock.SetDeliver(x).Returns(true));
 
             // Act 
-            x.Deliver();
+            s.Deliver();
 
             //Assert
-            Assert.IsTrue(x.Deliver());
+            e.Received().SetDelivered(s);
 
 
 
